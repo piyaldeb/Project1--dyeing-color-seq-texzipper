@@ -1,48 +1,62 @@
 @media print {
-  body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-  }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
 
-  h1 {
-      text-align: center;
-      font-size: 24px;
-      margin-bottom: 20px;
-  }
+    h1 {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
 
-  h2 {
-      font-size: 20px;
-      margin-top: 20px;
-  }
+    h2 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
 
-  table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-  }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
 
-  th, td {
-      border: 1px solid #000;
-      padding: 8px;
-      text-align: left;
-  }
+    th, td {
+        border: 1px solid #000;
+        padding: 8px;
+        text-align: left;
+    }
 
-  th {
-      background-color: #f2f2f2;
-  }
+    th {
+        background-color: #f2f2f2;
+    }
 
-  .color-box {
-      width: 20px;
-      height: 20px;
-      border: 1px solid #000;
-  }
+    .color-box {
+        width: 20px;
+        height: 20px;
+        border: 1px solid #000;
+    }
 
-  img {
-      width: 70px;
-      height: auto;
-  }
+    img {
+        width: 70px;
+        height: auto;
+    }
 
-  button {
-      display: none;
-  }
+    button {
+        display: none;
+    }
+
+    /* Box styling for Basic Report */
+    .basic-report-box {
+        border: 1px solid #000;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    /* Box styling for Advanced Report */
+    .advanced-report-box {
+        border: 1px solid #000;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
 }

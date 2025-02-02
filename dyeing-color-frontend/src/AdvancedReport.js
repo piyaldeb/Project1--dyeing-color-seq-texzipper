@@ -16,8 +16,9 @@ const AdvancedReport = ({ batches }) => {
                 Print Advanced Report
             </button>
             {batches.map((batch, batchIndex) => (
-                <div key={batchIndex} style={{ marginBottom: "20px" }}>
+                <div key={batchIndex} style={{ marginBottom: "20px", border: "1px solid #000", padding: "10px" }}>
                     <h3>Batch {batchIndex + 1}</h3>
+                    <p>No dyeing required for this batch. Colors can be dyed in any order without washing.</p>
                     <table>
                         <thead>
                             <tr>
