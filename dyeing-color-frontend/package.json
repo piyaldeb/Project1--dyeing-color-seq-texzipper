@@ -6,6 +6,7 @@
     "axios": "^1.7.9",
     "cra-template": "1.2.0",
     "dyeing-color-frontend": "file:",
+    "loader": "^2.1.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.1.5",
