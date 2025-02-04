@@ -4,8 +4,9 @@ import Report from "./Report";
 import AdvancedReport from "./AdvancedReport";
 import API_BASE_URL from "./config";
 import { HashRouter as Router } from "react-router-dom"; // Import HashRouter
+import Loader from "./Loader"; // Import a loading spinner component
 
-function App() {
+const App = () => {
     const [sortedColors, setSortedColors] = useState([]);
     const [groupedBatches, setGroupedBatches] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -39,21 +40,22 @@ function App() {
             setGroupedBatches(response.data.groupedBatches || []);
         } catch (err) {
             console.error("Error uploading files:", err);
-            setError("Failed to process images. Please try again.");
+            const errorMessage = err.response ? err.response.data.message : "Failed to process images. Please try again.";
+            setError(errorMessage);
         } finally {
             setLoading(false);
         }
     };
 
     return (
-        <Router> {/* Wrap your app in HashRouter */}
+        <Router>
             <div className="App" style={{ padding: "20px", maxWidth: "800px", margin: "0 auto" }}>
                 <h1>Dyeing Color Sequence Report</h1>
                 <div>
                     <input type="file" multiple accept="image/*" onChange={handleImageUpload} disabled={loading} />
                 </div>
 
-                {loading && <p>Processing images...</p>}
+                {loading && <Loader />} {/* Replace with a loading spinner component */}
                 {error && <p style={{ color: "red" }}>{error}</p>}
 
                 {sortedColors.length > 0 && (
@@ -79,6 +81,6 @@ function App() {
             </div>
         </Router>
     );
-}
+};
 
 export default App;
