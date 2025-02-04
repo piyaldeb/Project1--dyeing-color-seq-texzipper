@@ -9,7 +9,7 @@ const cors = require("cors");
 
 // Initialize Express app
 const app = express();
-const port = 5000;
+const port = 3000;
 
 // Enable CORS
 app.use(cors({
