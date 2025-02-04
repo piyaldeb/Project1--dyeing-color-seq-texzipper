@@ -12,7 +12,10 @@ const app = express();
 const port = 5000;
 
 // Enable CORS
-app.use(cors());
+app.use(cors({
+    origin: 'https://piyaldeb.github.io/Project1--dyeing-color-seq-texzipper/' // Replace with your frontend URL
+}));
+
 
 // Configure multer for image uploads
 const storage = multer.memoryStorage();
