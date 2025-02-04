@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import Report from "./Report";
 import AdvancedReport from "./AdvancedReport";
+import API_BASE_URL from "./config";
+
 
 function App() {
     const [sortedColors, setSortedColors] = useState([]);
@@ -27,11 +29,17 @@ function App() {
         setError("");
 
         try {
-            const response = await axios.post("http://localhost:5000/sort-colors", formData, {
+            // const response = await axios.post("http://localhost:5000/sort-colors", formData, {
+            //     headers: {
+            //         "Content-Type": "multipart/form-data",
+            //     },
+            // });
+            const response = await axios.post(`${API_BASE_URL}/sort-colors`, formData, {
                 headers: {
                     "Content-Type": "multipart/form-data",
                 },
             });
+            
 
             setSortedColors(response.data.sortedColors);
             setGroupedBatches(response.data.groupedBatches || []);
